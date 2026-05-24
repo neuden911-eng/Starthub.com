@@ -73,19 +73,7 @@ const STAGGER = {
 };
 
 const StartHubLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#3F3DBC" />
-        <stop offset="100%" stopColor="#1e1b4b" />
-      </linearGradient>
-    </defs>
-    <circle cx="50" cy="50" r="45" stroke="url(#logoGradient)" strokeWidth="8" />
-    <path 
-      d="M62 22L38 43C38 43 32 48 35 53L48 55L40 80L64 59C64 59 70 54 67 49L54 47L62 22Z" 
-      fill="url(#logoGradient)" 
-    />
-  </svg>
+  <img src="/logo.png" className={`${className} rounded-full object-cover`} alt="Start-Hub" />
 );
 
 const WaitlistForm = ({ id, onAdd }: { id: string, onAdd?: (entry: WaitlistEntry) => void }) => {
